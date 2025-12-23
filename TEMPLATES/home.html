@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FITMONSTER Gym - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
         <h1>PowerZone Gym</h1>
         <nav>
-            <a href="home.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="membership.html">Membership</a>
+            <a href="{{ url_for('home') }}" class="active">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('membership') }}">Membership</a>
         </nav>
     </header>
 
     <div class="hero">
-        <h2><b>Welcome to Powerone Gym</b></h2>
+        <h2><b>Welcome to PowerZone Gym</b></h2>
         <p>Your fitness journey starts here! Get stronger, healthier, and more confident with us.</p>
-        <a href="membership.html" class="btn">Join us Now</a>
+        <a href="{{ url_for('membership') }}" class="btn">Join us Now</a>
     </div>
 
     <footer>
